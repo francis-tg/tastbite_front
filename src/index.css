@@ -32,8 +32,42 @@ body{
   transition: color .5s ease-in-out;
 }
 
-.card-hover:hover>div{
+.card-hover:hover>img{
   transform: scale(1.1);
   overflow: hidden;
   transition: transform .5s ease-in-out;
+}
+
+.card-hover img{
+  transition: transform .5s ease-in-out;
+}
+
+.overlay-card figcaption{
+  bottom: -100%;
+  transition: all .5s ease-in-out .2s;
+}
+.overlay-card figcaption span{
+  color: white;
+  border-color: white;
+  transition: all .5s ease-in-out .2s;
+}
+.overlay-card:hover>figcaption{
+  bottom: 0;
+  color: white;
+  transition: all .5s ease-in-out ;
+}
+.overlay-card:hover >figcaption>span{
+  color: white;
+  border-color: white;
+  transition: all .5s ease-in-out;
+}
+
+.card-scale-hover img{
+  transition: transform .4s ease-in-out;
+}
+
+.card-scale-hover:hover > img{
+  transform: scale(1.05);
+  transition: transform .4s ease-in-out;
+  border-radius: 0.5rem;
 }

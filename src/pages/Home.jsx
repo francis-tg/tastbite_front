@@ -3,6 +3,8 @@ import { FiArrowRight, FiTrendingUp} from "react-icons/fi"
 import ReceipeBook from '../components/ReceipeBook'
 import { Link } from 'react-router-dom'
 import InboxForm from '../components/InboxForm'
+import Collections from '../components/Collections'
+import LatesReceipe from '../components/LatesReceipe'
 function Home() {
   return (
     <>
@@ -29,6 +31,8 @@ function Home() {
     </div>
     <ReceipeBook/>
     <InboxForm/>
+    <Collections/>
+    <LatesReceipe/>
     </>
   )
 }
