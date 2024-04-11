@@ -71,3 +71,35 @@ body{
   transition: transform .4s ease-in-out;
   border-radius: 0.5rem;
 }
+.hover-dropdown{
+  position: relative;
+}
+.hover-dropdown:hover{
+  transition: all .5s ease-in-out;
+}
+
+
+
+.hover-dropdown-list{
+  visibility: hidden;
+  background-color:  white;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 1.5rem;
+  z-index: 100;
+  padding: 20px;
+  transition: all .5s ease-in-out;
+  border-radius:0 0 .5rem .5rem;
+}
+
+.search-overlay{
+  background-color: #8080803a;
+}
+.hover-dropdown:hover>.hover-dropdown-list{
+  visibility:visible;
+  transition: all .5s ease-in-out .5s;
+}
+.hover-dropdown-list li{
+  padding:10px 0;
+}
