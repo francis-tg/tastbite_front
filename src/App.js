@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import { useEffect } from "react";
 import Footer from "./components/Footer";
+import CookieNotice from "./components/CookieNotice";
 
 function App() {
   useEffect(() => {
@@ -20,7 +21,8 @@ function App() {
     <Navbar/>
      <Routes>
       <Route path="/" element={<Home/>}/>
-     </Routes>
+      </Routes>
+      <CookieNotice/>
      <Footer/>
     </BrowserRouter>
   );

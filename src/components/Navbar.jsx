@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiChevronDown, FiSearch, } from "react-icons/fi"
 import {IoClose} from "react-icons/io5"
@@ -15,10 +15,28 @@ function Navbar() {
     }
     function onShowLogin() {
         setLoginShow(!showLogin)
+      
     }
+    useEffect(() => {
+		window.addEventListener("scroll", (e) => {
+			if (window.pageYOffset > 200) {
+				document
+					.querySelector("nav")
+					.classList.add("fixed","w-full","bg-white","shadow-lg")
+				
+			}
+			if (window.pageYOffset <= 100) {
+				document
+					.querySelector("nav")
+					.classList.remove("fixed", "w-full", "bg-white", "shadow-lg");
+				
+			}
+		});
+		
+	},[])
   return (
     <div className='relative'>
-        <nav className='flex justify-between p-3 items-center'>
+        <nav className='flex justify-between p-3 items-center z-[1000] duration-300 transition-all'>
             <div>
                 <img className='w-28' src={require("../img/logo.png")} alt="" />
             </div>
