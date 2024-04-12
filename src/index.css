@@ -76,8 +76,15 @@ body{
 }
 .hover-dropdown:hover{
   transition: all .5s ease-in-out;
+  
+}
+.hover-dropdown:hover> span{
+  color: #ff8800;
 }
 
+.hover-dropdown:hover> svg{
+  color: #ff8800;
+}
 
 
 .hover-dropdown-list{
@@ -85,21 +92,33 @@ body{
   background-color:  white;
   position: absolute;
   left: 0;
-  width: 100%;
-  top: 1.5rem;
+  top: 2rem;
   z-index: 100;
-  padding: 20px;
+  padding:0;
+  width: 200px;
   transition: all .5s ease-in-out;
   border-radius:0 0 .5rem .5rem;
 }
 
 .search-overlay{
-  background-color: #8080803a;
+  transition: all .5s ease-in-out;
+  background:linear-gradient(to bottom,  rgba(128, 128, 128, 0.51),rgba(255, 255, 255, 0.449))
 }
 .hover-dropdown:hover>.hover-dropdown-list{
   visibility:visible;
   transition: all .5s ease-in-out .5s;
 }
-.hover-dropdown-list li{
-  padding:10px 0;
+
+.hover-dropdown-list li {
+  padding:10px 15px ;
+  border-radius:  .5rem;
+}
+.hover-dropdown-list li:hover{
+  background-color: #ff8800;
+  color: #fff;
+  transition: all .5s ease;
+}
+
+.overlay-modal{
+  background-color: rgba(128, 128, 128, 0.5);
 }
