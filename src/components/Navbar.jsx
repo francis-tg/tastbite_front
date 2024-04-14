@@ -38,7 +38,9 @@ function Navbar() {
     <div className='relative'>
         <nav className='flex justify-between p-3 items-center z-[1000] duration-300 transition-all'>
             <div>
-                <img className='w-28' src={require("../img/logo.png")} alt="" />
+                  <Link to={"/"}>
+                      <img className='w-28' src={require("../img/logo.png")} alt="" />
+                </Link>
             </div>
             <div className='xl:block hidden'>
                 <div className='flex items-center gap-12'>

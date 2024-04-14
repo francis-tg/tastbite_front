@@ -176,3 +176,7 @@ h1,h2,h3,h4,h5,h6{
 .custom-checkbox-input:checked + .custom-checkbox-checkmark {
   border-color: #ff8800;
 }
+.custom-checkbox-input:checked ~ .input-label {
+  text-decoration: line-through;
+  color: gray;
+}

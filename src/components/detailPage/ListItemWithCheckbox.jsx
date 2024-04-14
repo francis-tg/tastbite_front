@@ -5,9 +5,8 @@ const ListItemWithCheckbox = ({ className, keyName, value }) => {
     <li key={keyName} className={className}>
       <label className="custom-checkbox-label">
         <input type="checkbox" className="custom-checkbox-input" />
-        
         <span className="custom-checkbox-checkmark"></span>
-        {`${keyName}: ${value}`}
+        <span className='input-label'>{`${keyName}: ${value}`}</span>
       </label>
     </li>
   );
