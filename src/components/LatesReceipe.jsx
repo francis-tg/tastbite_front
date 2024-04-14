@@ -1,4 +1,5 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 const data1 = [
     {
         title: "Caramel Strawberry Milkshake",
@@ -62,6 +63,7 @@ const data1 = [
     }
 ]
 function LatesReceipe() {
+    const navigate = useNavigate()
     return (
         <div className='py-10'>
             <div className="flex flex-col items-center justify-center">
@@ -71,7 +73,7 @@ function LatesReceipe() {
                     </h1>
                     <div className="grid grid-cols-4 gap-8">
                         {data1.map((d, k) => (
-                            <figure key={k} className='w-full card-scale-hover overflow-hidden rounded-lg'>
+                            <figure key={k} className='w-full card-scale-hover overflow-hidden rounded-lg' onClick={()=>navigate("/detail/"+parseInt(k+1))}>
                                 <img src={d.image} className='rounded-lg overflow-hidden' alt='' />
                                 <figcaption className='my-3'>
                                     <h1 className='text-md font-semibold font-serif'>{d.title}</h1>

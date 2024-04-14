@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 body{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+h1,h2,h3,h4,h5,h6{
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -121,4 +131,48 @@ body{
 
 .overlay-modal{
   background-color: rgba(128, 128, 128, 0.5);
+}
+
+.custom-checkbox-container {
+  display: inline-block;
+}
+
+.custom-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox-input {
+  display: none;
+}
+
+.custom-checkbox-checkmark {
+  width: 25px;
+  height: 25px;
+  border: 2px solid;
+  border-radius: 100%;
+  margin-right: 10px;
+  position: relative;
+}
+
+.custom-checkbox-checkmark::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 20px;
+  border: solid #ff8800;
+  border-width: 0 3px 3px 0;
+  top:-5px;
+  left: 10px;
+  transform: rotate(45deg);
+  display: none;
+  padding: 5px 0;
+}
+.custom-checkbox-input:checked + .custom-checkbox-checkmark::after {
+  display: block;
+  background-color: white;
+}
+.custom-checkbox-input:checked + .custom-checkbox-checkmark {
+  border-color: #ff8800;
 }

@@ -12,7 +12,7 @@ function Home() {
         <div className='flex items-center gap-10 bg-slate-300 w-[70%] rounded-l-xl relative'>
             <img src={require("../img/menu1.jpg")} className=' rounded-l-xl' alt="" />
             <div className='p-3 w-1/4 '>
-                <p className='mb-2 flex items-center gap-5 font-serif'>
+                <p className='mb-2 flex items-center gap-5 '>
                     <FiTrendingUp className=' text-orange-500'/>
                     85% would make this again
                 </p>

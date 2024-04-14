@@ -40,7 +40,7 @@ function Navbar() {
             <div>
                 <img className='w-28' src={require("../img/logo.png")} alt="" />
             </div>
-            <div>
+            <div className='xl:block hidden'>
                 <div className='flex items-center gap-12'>
                     <Link to={"#"} className="flex items-center hover-dropdown">
                         <span>Homepage</span>

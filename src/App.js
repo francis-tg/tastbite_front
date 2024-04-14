@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { useEffect } from "react";
 import Footer from "./components/Footer";
 import CookieNotice from "./components/CookieNotice";
+import DetailReceipe from "./pages/DetailReceipe";
 
 function App() {
   useEffect(() => {
@@ -20,7 +21,8 @@ function App() {
     <BrowserRouter>
     <Navbar/>
      <Routes>
-      <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/detail/:receipe_id?" element={<DetailReceipe/>}/>
       </Routes>
       <CookieNotice/>
      <Footer/>
