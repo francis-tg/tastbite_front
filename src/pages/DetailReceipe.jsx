@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	FiUpload,
 	FiBookmark,
@@ -13,10 +13,15 @@ import { detail } from "../data";
 import DetailAndIntructions from "../components/detailPage/DetailAndIntructions";
 import NewLetters from "../components/detailPage/NewLetters";
 import WriteComment from "../components/detailPage/WriteComment";
-
-
+import {useDispatch} from "react-redux"
+import { mutateLogin } from "../app/features/loginPopup";
 
 function DetailReceipe() {
+    const dispatch = useDispatch();
+    function onShowLogin() {
+        dispatch(mutateLogin());
+      
+    }
 	return (
 		<div className="flex items-center justify-center">
 			<div className=" w-[80%] py-12">
@@ -133,7 +138,7 @@ function DetailReceipe() {
 
                         </div>
                     </div>
-                    <WriteComment/>
+                    <WriteComment showLogin={onShowLogin}/>
 				</div>
 			</div>
 		</div>

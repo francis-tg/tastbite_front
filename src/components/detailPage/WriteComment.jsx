@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function WriteComment() {
+function WriteComment({showLogin}) {
   return (
       <div>
           <div className='flex justify-between items-center mb-3'>
@@ -9,7 +9,7 @@ function WriteComment() {
                Write a comment
               </h1>
               <div className='flex gap-2 items-center'>
-                  <Link to={"#"} className='text-orange-500'>Login</Link>
+                  <Link to={"#"} onClick={showLogin} className='text-orange-500'>Login</Link>
                    to post a comment
               </div>
               

@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import { FiChevronDown, FiSearch, } from "react-icons/fi"
 import {IoClose} from "react-icons/io5"
 import Login from '../pages/Login'
+import {useSelector} from "react-redux"
 function Navbar() {
-    const [showLogin,setLoginShow] = useState(false)
+    const loginShow = useSelector((state) => state.loginMutation.login_show)
+    console.log(loginShow)
+    const [showLogin,setLoginShow] = useState(loginShow??false)
     function showSearchBar() {
         document.querySelector(".search-overlay").classList.contains("hidden")&&
         document.querySelector(".search-overlay").classList.replace("hidden","flex")
@@ -13,6 +16,7 @@ function Navbar() {
         document.querySelector(".search-overlay").classList.contains("flex")&&
         document.querySelector(".search-overlay").classList.replace("flex","hidden")
     }
+
     function onShowLogin() {
         setLoginShow(!showLogin)
       
